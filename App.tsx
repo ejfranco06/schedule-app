@@ -1,12 +1,13 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, SafeAreaView} from 'react-native';
 import {LoginRegister} from './src/screen/LoginRegister';
+
 const App = () => {
   return (
     <>
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <LoginRegister />
-      </View>
+      </SafeAreaView>
     </>
   );
 };

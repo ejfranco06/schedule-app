@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {Text, View, TextInput, Button, Alert, StyleSheet} from 'react-native';
 import {useForm, Controller} from 'react-hook-form';
 
+import {Label} from '../component/Label';
+
 import LinearGradient from 'react-native-linear-gradient';
 
 type FormData = {
@@ -26,7 +28,7 @@ export const LoginRegister = () => {
 
       <View style={styles.form}>
         <Text style={styles.label}>{isLogin ? 'Login' : 'Register'}</Text>
-        <Text style={styles.label}>Username</Text>
+        <Label text="Username" />
         <Controller
           control={control}
           render={({onChange, onBlur, value}) => (
@@ -42,7 +44,7 @@ export const LoginRegister = () => {
           defaultValue=""
         />
 
-        <Text style={styles.label}>Password</Text>
+        <Label text="Password" />
         <Controller
           control={control}
           render={({onChange, onBlur, value}) => (
